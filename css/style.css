@@ -9,19 +9,31 @@
 
 }
 
-#div{
+#div_start{
     background: hsl(340, 100%, 63%);
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 200px 200px 200px 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 200px 80px 200px 25px;
     grid-template-areas: 
-    "hea nav"
-    "se1 se1"
-    "se2 se2"
-    "se3 se3"
-    "end se4"
+    "hea nav nav"
+    "ar1 ar1 ar1"
+    "spa spa spa"
+    "ar2 ar2 ar2"
+    "end end end"
     ;
+}
 
+#div_flashcards{
+    background: hsl(197, 86%, 41%);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50px 50px 400px 25px;
+    grid-template-areas: 
+    "hea nav nav"
+    "tex tit tes"
+    "pi1 fla pi2"
+    "end end end"
+    ;
 }
 
 header{
@@ -48,6 +60,20 @@ nav{
     align-items: center;    
 }
 
+#tex{
+    
+}
+
+#tit{
+
+}
+
+#tes{
+
+}
+
+
+
 
 #link_list{
     display: flex;
@@ -64,22 +90,99 @@ img{
     border-radius: 10%;
 }
 
+#article_1{
+    margin: 20px;
+    grid-area: ar1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "ah1 ah1 ah1"
+    "se1 se2 se3"
+    ;
+}
+
+#article_2{
+    margin: 20px;
+    grid-area: ar2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "ah2 ah2 ah2"
+    "se4 se5 se6"
+    ;
+}
+
+#ah1{
+    grid-area: ah1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #section_1{
     grid-area: se1;
     padding: 10px;
     background-color: chartreuse;
+    border-radius: 20px;
+    margin: 20px;
+
 }
 
 #section_2{
     grid-area: se2;
     padding: 10px;
     background: red;
+    border-radius: 20px;
+    margin: 20px;
+
+}
+section:hover{
+    transform: scale(105%);
 }
 
 #section_3{
     grid-area: se3;
     padding: 10px;
     background: blue;
+    border-radius: 20px;
+    margin: 20px;
+
+}
+
+#ah2{
+    grid-area: ah2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section_4{
+    grid-area: se4;
+    padding: 10px;
+    background-color: chartreuse;
+    border-radius: 20px;
+    margin: 20px;
+
+}
+
+#section_5{
+    grid-area: se5;
+    padding: 10px;
+    background: red;
+    border-radius: 20px;
+    margin: 20px;
+
+}
+
+#section_6{
+    grid-area: se6;
+    padding: 10px;
+    background: blue;
+    border-radius: 20px;
+    margin: 20px;
+
 }
 
 
