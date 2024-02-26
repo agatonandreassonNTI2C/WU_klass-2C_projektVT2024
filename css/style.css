@@ -12,7 +12,7 @@
 #div_start{
     background: hsl(340, 100%, 63%);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 50px 200px 80px 200px 25px;
     grid-template-areas: 
     "hea nav nav"
@@ -31,7 +31,7 @@
     grid-template-areas: 
     "hea nav nav"
     "tex tit tes"
-    "pi1 fla pi2"
+    "pi2 fla pi1"
     "end end end"
     ;
 }
@@ -61,15 +61,61 @@ nav{
 }
 
 #tex{
-    
+    background: navy;
+    grid-area: tex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #tit{
-
+    background: lightgreen;
+    grid-area: tit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #tes{
+    background: crimson;
+    grid-area: tes;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+#pil1{
+    grid-area: pi1;
+}
+
+#pil2{
+    grid-area: pi2;
+}
+
+#flashcards_section{
+    grid-area: fla;
+    background: darkgoldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+#flashcards_article{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#svar{
+
+    position: relative;
+    transition: all 0.5s;
+}
+
+.visa_svar {
+
+    transform: translateY(400px);
 }
 
 
