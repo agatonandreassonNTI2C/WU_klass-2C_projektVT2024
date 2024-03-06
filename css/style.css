@@ -36,6 +36,20 @@
     ;
 }
 
+#body_texter{
+    background: hsl(197, 86%, 41%);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50px 200px 80px 200px 25px;
+    grid-template-areas: 
+    "hea nav nav"
+    "ta1 ta1 ta1"
+    "nil nil nil"
+    "ta2 ta2 ta2"
+    "end end end"
+    ;
+}
+
 header{
     background: rgb(0, 0, 0);
     grid-area: hea;
@@ -115,10 +129,8 @@ nav{
 
 .visa_svar {
 
-    transform: translateY(400px);
+    opacity: 0;
 }
-
-
 
 
 #link_list{
@@ -229,6 +241,91 @@ section:hover{
     border-radius: 20px;
     margin: 20px;
 
+}
+
+#text_article_1{
+    grid-area: ta1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 200px;
+    grid-template-areas: 
+    "tah1 tah1 tah1"
+    "ta1s1 ta1s2 ta1s3"
+    ;
+}
+
+#text_article_2{
+    grid-area: ta2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 200px;
+    grid-template-areas: 
+    "tah2 tah2 tah2"
+    "ta2s1 ta2s2 ta2s3"
+    ;
+}
+
+#tah1{
+    grid-area: tah1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tah2{
+    grid-area: tah2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#text_1{
+
+    grid-area: ta1s1;
+    margin: 20px;
+    padding: 10px;
+    background: orange;
+}
+
+#text_2{
+
+    grid-area: ta1s2;
+    margin: 20px;
+    padding: 10px;
+    background: chartreuse;
+}
+
+#text_3{
+
+    grid-area: ta1s3;
+    margin: 20px;
+    padding: 10px;
+    background: fuchsia;
+}
+
+#text_4{
+
+    grid-area: ta2s1;
+    margin: 20px;
+    padding: 10px;
+    background: orange;
+
+}
+
+#text_5{
+
+    grid-area: ta2s2;
+    margin: 20px;
+    padding: 10px;
+    background: chartreuse;
+}
+
+#text_6{
+
+    grid-area: ta2s3;
+    margin: 20px;
+    padding: 10px;
+    background: fuchsia;
 }
 
 
