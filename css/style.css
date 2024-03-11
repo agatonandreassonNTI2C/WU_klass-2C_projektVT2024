@@ -13,13 +13,12 @@
     background: hsl(340, 100%, 63%);
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 50px 200px 80px 200px 25px;
+    grid-template-rows: 50px 200px 70px 1fr;
     grid-template-areas: 
     "hea nav nav"
     "ar1 ar1 ar1"
     "spa spa spa"
     "ar2 ar2 ar2"
-    "end end end"
     ;
 }
 
@@ -27,28 +26,55 @@
     background: hsl(197, 86%, 41%);
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 50px 50px 400px 25px;
+    grid-template-rows: 50px 100px 1fr;
     grid-template-areas: 
     "hea nav nav"
     "tex tit tes"
     "pi2 fla pi1"
-    "end end end"
     ;
+}
+
+@media screen and (min-width: 768px) {
+    #div_flashcards{
+        background: hsl(197, 86%, 41%);
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 50px 50px 454px;
+        grid-template-areas: 
+        "hea nav nav"
+        "tex tit tes"
+        "pi2 fla pi1"
+        ;
+    }
 }
 
 #body_texter{
     background: hsl(197, 86%, 41%);
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 50px 200px 80px 200px 25px;
+    grid-template-rows: 50px 1fr 1fr;
     grid-template-areas: 
     "hea nav nav"
     "ta1 ta1 ta1"
-    "nil nil nil"
     "ta2 ta2 ta2"
-    "end end end"
     ;
 }
+
+@media screen and (min-width: 768px) {
+    #body_texter{
+        background: hsl(197, 86%, 41%);
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 50px 200px 80px 1fr;
+        grid-template-areas: 
+        "hea nav nav"
+        "ta1 ta1 ta1"
+        "nil nil nil"
+        "ta2 ta2 ta2"
+        ;
+    }
+}
+
 
 header{
     background: rgb(0, 0, 0);
@@ -56,7 +82,6 @@ header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 #nmr1{
@@ -149,27 +174,57 @@ img{
 }
 
 #article_1{
-    margin: 20px;
+    margin: 5px;
     grid-area: ar1;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
-    "ah1 ah1 ah1"
-    "se1 se2 se3"
+    "ah1 ah1"
+    "se1 se2"
+    "se3 se3"
     ;
 }
 
+@media screen and (min-width:768px) {    
+    #article_1{
+        margin: 20px;
+        grid-area: ar1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "ah1 ah1 ah1"
+        "se1 se2 se3"
+        ;
+    }
+}
+
 #article_2{
-    margin: 20px;
+    margin: 5px;
     grid-area: ar2;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
-    "ah2 ah2 ah2"
-    "se4 se5 se6"
+    "ah2 ah2"
+    "se4 se5"
+    "se6 se6"
     ;
+}
+
+@media screen and (min-width:768px) {    
+    #article_2{
+        margin: 20px;
+        grid-area: ar2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "ah2 ah2 ah2"
+        "se4 se5 se6"
+        ;
+    }
 }
 
 #ah1{
@@ -179,14 +234,18 @@ img{
     align-items: center;
 }
 
+section:hover{
+    transform: scale(105%);
+}
+
 #section_1{
     grid-area: se1;
     padding: 10px;
     background-color: chartreuse;
     border-radius: 20px;
     margin: 20px;
-
 }
+
 
 #section_2{
     grid-area: se2;
@@ -196,9 +255,6 @@ img{
     margin: 20px;
 
 }
-section:hover{
-    transform: scale(105%);
-}
 
 #section_3{
     grid-area: se3;
@@ -207,6 +263,16 @@ section:hover{
     border-radius: 20px;
     margin: 20px;
 
+}
+
+@media screen and (min-width: 768px) {
+    #section_3{
+        grid-area: se3;
+        padding: 10px;
+        background: blue;
+        border-radius: 20px;
+        margin: 20px;
+    }
 }
 
 #ah2{
@@ -246,23 +312,51 @@ section:hover{
 #text_article_1{
     grid-area: ta1;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr;
     grid-template-areas: 
-    "tah1 tah1 tah1"
-    "ta1s1 ta1s2 ta1s3"
+    "tah1 tah1"
+    "ta1s1 ta1s2"
+    "ta1s3 ta1s3"
     ;
+}
+
+@media screen and (min-width: 768px) {
+    #text_article_1{
+        grid-area: ta1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas: 
+        "tah1 tah1 tah1"
+        "ta1s1 ta1s2 ta1s3"
+        ;
+    }
 }
 
 #text_article_2{
     grid-area: ta2;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 2fr 1fr;
     grid-template-areas: 
-    "tah2 tah2 tah2"
-    "ta2s1 ta2s2 ta2s3"
+    "tah2 tah2"
+    "ta2s1 ta2s2"
+    "ta2s3 ta2s3"
     ;
+}
+
+@media screen and (min-width: 768px) {
+    #text_article_2{
+        grid-area: ta2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas: 
+        "tah2 tah2 tah2"
+        "ta2s1 ta2s2 ta2s3"
+        ;
+    }
 }
 
 #tah1{
@@ -347,11 +441,6 @@ p {
     font-size: 1rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
-}
-
-footer{
-    grid-area: end;
-    background: rgb(255, 255, 255);
 }
 
 
