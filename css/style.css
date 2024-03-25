@@ -10,10 +10,10 @@
 }
 
 #div_start{
-    background: hsl(340, 100%, 63%);
+    background: hsl(340, 5%, 11%);
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 50px 200px 70px 1fr;
+    grid-template-rows: 50px 250px 70px 1fr;
     grid-template-areas: 
     "hea nav nav"
     "ar1 ar1 ar1"
@@ -23,10 +23,10 @@
 }
 
 #div_flashcards{
-    background: hsl(197, 86%, 41%);
+    background: hsl(340, 5%, 11%);
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 50px 100px 1fr;
+    grid-template-rows: 50px 200px 350px;
     grid-template-areas: 
     "hea nav nav"
     "tex tit tes"
@@ -49,7 +49,7 @@
 }
 
 #body_texter{
-    background: hsl(197, 86%, 41%);
+    background: hsl(340, 5%, 11%);
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 50px 1fr 1fr;
@@ -62,17 +62,93 @@
 
 @media screen and (min-width: 768px) {
     #body_texter{
-        background: hsl(197, 86%, 41%);
+        background: hsl(340, 5%, 11%);
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 50px 200px 80px 1fr;
+        grid-template-rows: 50px 1fr 1fr;
         grid-template-areas: 
         "hea nav nav"
         "ta1 ta1 ta1"
-        "nil nil nil"
         "ta2 ta2 ta2"
         ;
     }
+}
+
+#body_test{
+    background: hsl(340, 5%, 11%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 100px 1fr;
+    grid-template-areas: 
+    "hea nav nav"
+    "tef tef tef"
+    "tim tim tim"
+    ;
+}
+
+@media screen and (min-width: 768px) {
+    #body_test{
+        background: hsl(340, 5%, 11%);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 100px 1fr;
+        grid-template-areas: 
+        "hea nav nav"
+        "tef tef tef"
+        "tim tim tim"
+        ;
+    }
+}
+
+#tim{
+    grid-area: tim;
+    display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "im1"
+    "im2"
+    "im3"
+    "im4"
+    ;
+}
+
+@media screen and (min-width: 768px) {
+    #tim{
+        grid-area: tim;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "im1 im2"
+        "im3 im4"
+        ;
+    } 
+}
+
+
+#tef{
+    background-color: rgb(11, 165, 212);
+    grid-area: tef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img1{
+    grid-area: im1;
+}
+
+#img2{
+    grid-area: im2;
+}
+
+#img3{
+    grid-area: im3;
+}
+
+#img4{
+    grid-area: im4;
 }
 
 
@@ -85,22 +161,30 @@ header{
 }
 
 #nmr1{
-    color: rgb(197, 23, 142);
+    color: rgb(23, 154, 197);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2rem;
+    font-size: 1rem;
 
 }
 
+@media screen and (min-width: 768px) {
+    #nmr1{
+        font-size: 2rem;
+        color: rgb(197, 23, 49);
+    }
+}
+
+
 nav{
     grid-area: nav;
-    background: rgb(89, 16, 179);
+    background: #45A29E;
     display: flex;
     justify-content: center;
     align-items: center;    
 }
 
 #tex{
-    background: navy;
+    background-color: rgb(11, 165, 212);
     grid-area: tex;
     display: flex;
     align-items: center;
@@ -108,7 +192,7 @@ nav{
 }
 
 #tit{
-    background: lightgreen;
+    background-color: black;
     grid-area: tit;
     display: flex;
     align-items: center;
@@ -116,7 +200,7 @@ nav{
 }
 
 #tes{
-    background: crimson;
+    background-color: rgb(11, 165, 212);
     grid-area: tes;
     display: flex;
     align-items: center;
@@ -133,7 +217,7 @@ nav{
 
 #flashcards_section{
     grid-area: fla;
-    background: darkgoldenrod;
+    background-color: rgb(11, 165, 212);
     display: flex;
     justify-content: center;
     align-items: space-evenly;
@@ -146,14 +230,14 @@ nav{
     align-items: center;
 }
 
-#svar{
 
+
+#svar{
     position: relative;
     transition: all 0.5s;
 }
 
 .visa_svar {
-
     opacity: 0;
 }
 
@@ -241,7 +325,7 @@ section:hover{
 #section_1{
     grid-area: se1;
     padding: 10px;
-    background-color: chartreuse;
+    background-color: rgb(11, 165, 212);
     border-radius: 20px;
     margin: 20px;
 }
@@ -250,7 +334,7 @@ section:hover{
 #section_2{
     grid-area: se2;
     padding: 10px;
-    background: red;
+    background-color: rgb(11, 165, 212);
     border-radius: 20px;
     margin: 20px;
 
@@ -259,21 +343,13 @@ section:hover{
 #section_3{
     grid-area: se3;
     padding: 10px;
-    background: blue;
+    background-color: rgb(11, 165, 212);
     border-radius: 20px;
     margin: 20px;
 
 }
 
-@media screen and (min-width: 768px) {
-    #section_3{
-        grid-area: se3;
-        padding: 10px;
-        background: blue;
-        border-radius: 20px;
-        margin: 20px;
-    }
-}
+
 
 #ah2{
     grid-area: ah2;
@@ -285,7 +361,7 @@ section:hover{
 #section_4{
     grid-area: se4;
     padding: 10px;
-    background-color: chartreuse;
+    background-color: rgb(11, 165, 212);
     border-radius: 20px;
     margin: 20px;
 
@@ -294,7 +370,7 @@ section:hover{
 #section_5{
     grid-area: se5;
     padding: 10px;
-    background: red;
+    background-color: rgb(11, 165, 212);
     border-radius: 20px;
     margin: 20px;
 
@@ -303,7 +379,7 @@ section:hover{
 #section_6{
     grid-area: se6;
     padding: 10px;
-    background: blue;
+    background-color: rgb(11, 165, 212);
     border-radius: 20px;
     margin: 20px;
 
@@ -378,7 +454,8 @@ section:hover{
     grid-area: ta1s1;
     margin: 20px;
     padding: 10px;
-    background: orange;
+    background-color: rgb(11, 165, 212);
+    border-radius: 20px;
 }
 
 #text_2{
@@ -386,7 +463,8 @@ section:hover{
     grid-area: ta1s2;
     margin: 20px;
     padding: 10px;
-    background: chartreuse;
+    background-color: rgb(11, 165, 212);
+    border-radius: 20px;
 }
 
 #text_3{
@@ -394,7 +472,8 @@ section:hover{
     grid-area: ta1s3;
     margin: 20px;
     padding: 10px;
-    background: fuchsia;
+    background-color: rgb(11, 165, 212);
+    border-radius: 20px;
 }
 
 #text_4{
@@ -402,8 +481,8 @@ section:hover{
     grid-area: ta2s1;
     margin: 20px;
     padding: 10px;
-    background: orange;
-
+    background-color: rgb(11, 165, 212);
+    border-radius: 20px;
 }
 
 #text_5{
@@ -411,7 +490,8 @@ section:hover{
     grid-area: ta2s2;
     margin: 20px;
     padding: 10px;
-    background: chartreuse;
+    background-color: rgb(11, 165, 212);
+    border-radius: 20px;
 }
 
 #text_6{
@@ -419,21 +499,25 @@ section:hover{
     grid-area: ta2s3;
     margin: 20px;
     padding: 10px;
-    background: fuchsia;
+    background-color: rgb(11, 165, 212);
+    border-radius: 20px;
 }
 
 
 h1 {
-    color: rgb(6, 6, 6);
+    color: rgb(11, 165, 212);;
+}
 
-    font-size: 2.56rem;
+h2 {
+    color: aliceblue;
+    font-size: 1.64rem;
 }
 
 h4 {
-    color: rgb(6, 6, 6);
+    color: rgb(255, 255, 255);
 
-    font-size: 2rem;
 }
+
 
 p {
     color: white;
@@ -448,5 +532,5 @@ a {
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
-    text-decoration: none;
+    text-decoration: wavy;
 }
