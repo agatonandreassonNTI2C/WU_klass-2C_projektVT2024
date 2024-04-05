@@ -9,7 +9,7 @@
 
 }
 
-#div_start{
+#body_start{
     background: hsl(340, 5%, 11%);
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -34,19 +34,6 @@
     ;
 }
 
-@media screen and (min-width: 768px) {
-    #div_flashcards{
-        background: hsl(197, 86%, 41%);
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 50px 50px 454px;
-        grid-template-areas: 
-        "hea nav nav"
-        "tex tit tes"
-        "pi2 fla pi1"
-        ;
-    }
-}
 
 #body_texter{
     background: hsl(340, 5%, 11%);
@@ -60,19 +47,6 @@
     ;
 }
 
-@media screen and (min-width: 768px) {
-    #body_texter{
-        background: hsl(340, 5%, 11%);
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 50px 1fr 1fr;
-        grid-template-areas: 
-        "hea nav nav"
-        "ta1 ta1 ta1"
-        "ta2 ta2 ta2"
-        ;
-    }
-}
 
 #body_test{
     background: hsl(340, 5%, 11%);
@@ -86,19 +60,6 @@
     ;
 }
 
-@media screen and (min-width: 768px) {
-    #body_test{
-        background: hsl(340, 5%, 11%);
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 50px 100px 1fr;
-        grid-template-areas: 
-        "hea nav nav"
-        "tef tef tef"
-        "tim tim tim"
-        ;
-    }
-}
 
 #tim{
     grid-area: tim;
@@ -111,19 +72,6 @@
     "im3"
     "im4"
     ;
-}
-
-@media screen and (min-width: 768px) {
-    #tim{
-        grid-area: tim;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "im1 im2"
-        "im3 im4"
-        ;
-    } 
 }
 
 
@@ -167,13 +115,6 @@ header{
 
 }
 
-@media screen and (min-width: 768px) {
-    #nmr1{
-        font-size: 2rem;
-        color: rgb(197, 23, 49);
-    }
-}
-
 
 nav{
     grid-area: nav;
@@ -209,10 +150,12 @@ nav{
 
 #pil1{
     grid-area: pi1;
+    background: black;
 }
 
 #pil2{
     grid-area: pi2;
+    background: black;
 }
 
 #flashcards_section{
@@ -270,20 +213,6 @@ img{
     ;
 }
 
-@media screen and (min-width:768px) {    
-    #article_1{
-        margin: 20px;
-        grid-area: ar1;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "ah1 ah1 ah1"
-        "se1 se2 se3"
-        ;
-    }
-}
-
 #article_2{
     margin: 5px;
     grid-area: ar2;
@@ -297,19 +226,6 @@ img{
     ;
 }
 
-@media screen and (min-width:768px) {    
-    #article_2{
-        margin: 20px;
-        grid-area: ar2;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "ah2 ah2 ah2"
-        "se4 se5 se6"
-        ;
-    }
-}
 
 #ah1{
     grid-area: ah1;
@@ -348,7 +264,6 @@ section:hover{
     margin: 20px;
 
 }
-
 
 
 #ah2{
@@ -397,18 +312,6 @@ section:hover{
     ;
 }
 
-@media screen and (min-width: 768px) {
-    #text_article_1{
-        grid-area: ta1;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 50px 1fr;
-        grid-template-areas: 
-        "tah1 tah1 tah1"
-        "ta1s1 ta1s2 ta1s3"
-        ;
-    }
-}
 
 #text_article_2{
     grid-area: ta2;
@@ -422,18 +325,6 @@ section:hover{
     ;
 }
 
-@media screen and (min-width: 768px) {
-    #text_article_2{
-        grid-area: ta2;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 50px 1fr;
-        grid-template-areas: 
-        "tah2 tah2 tah2"
-        "ta2s1 ta2s2 ta2s3"
-        ;
-    }
-}
 
 #tah1{
     grid-area: tah1;
@@ -450,7 +341,9 @@ section:hover{
 }
 
 #text_1{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-area: ta1s1;
     margin: 20px;
     padding: 10px;
@@ -459,7 +352,9 @@ section:hover{
 }
 
 #text_2{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-area: ta1s2;
     margin: 20px;
     padding: 10px;
@@ -468,7 +363,9 @@ section:hover{
 }
 
 #text_3{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-area: ta1s3;
     margin: 20px;
     padding: 10px;
@@ -477,7 +374,9 @@ section:hover{
 }
 
 #text_4{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-area: ta2s1;
     margin: 20px;
     padding: 10px;
@@ -486,7 +385,9 @@ section:hover{
 }
 
 #text_5{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-area: ta2s2;
     margin: 20px;
     padding: 10px;
@@ -495,7 +396,9 @@ section:hover{
 }
 
 #text_6{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-area: ta2s3;
     margin: 20px;
     padding: 10px;
@@ -533,4 +436,131 @@ a {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
     text-decoration: wavy;
+}
+
+
+@media screen and (min-width: 768px) {
+    #div_flashcards{
+        background: hsl(197, 86%, 41%);
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 50px 50px 454px;
+        grid-template-areas: 
+        "hea nav nav"
+        "tex tit tes"
+        "pi2 fla pi1"
+        ;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    #body_texter{
+        background: hsl(340, 5%, 11%);
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 50px 1fr 1fr;
+        grid-template-areas: 
+        "hea nav nav"
+        "ta1 ta1 ta1"
+        "ta2 ta2 ta2"
+        ;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    #body_test{
+        background: hsl(340, 5%, 11%);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 100px 1fr;
+        grid-template-areas: 
+        "hea nav nav"
+        "tef tef tef"
+        "tim tim tim"
+        ;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    #tim{
+        grid-area: tim;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "im1 im2"
+        "im3 im4"
+        ;
+    } 
+}
+
+
+@media screen and (min-width: 768px) {
+    #nmr1{
+        font-size: 2rem;
+        color: rgb(23, 154, 197);
+    }
+}
+
+
+
+@media screen and (min-width:768px) {    
+    #article_1{
+        margin: 20px;
+        grid-area: ar1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "ah1 ah1 ah1"
+        "se1 se2 se3"
+        ;
+    }
+}
+
+
+@media screen and (min-width:768px) {    
+    #article_2{
+        margin: 20px;
+        grid-area: ar2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "ah2 ah2 ah2"
+        "se4 se5 se6"
+        ;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    #text_article_1{
+        grid-area: ta1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas: 
+        "tah1 tah1 tah1"
+        "ta1s1 ta1s2 ta1s3"
+        ;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    #text_article_2{
+        grid-area: ta2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas: 
+        "tah2 tah2 tah2"
+        "ta2s1 ta2s2 ta2s3"
+        ;
+    }
 }
