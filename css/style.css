@@ -13,9 +13,10 @@
     background: hsl(340, 5%, 11%);
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 50px auto auto auto;
+    grid-template-rows: 50px auto auto auto auto;
     grid-template-areas: 
     "hea nav nav"
+    "sta sta sta"
     "ar1 ar1 ar1"
     "ar2 ar2 ar2"
     "foo foo foo"
@@ -26,12 +27,20 @@
     background: hsl(340, 5%, 11%);
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 50px 200px 350px;
+    grid-template-rows: 50px auto 20px auto auto auto;
     grid-template-areas: 
     "hea nav nav"
     "tex tit tes"
-    "pi2 fla pi1"
+    "bla bla bla"
+    "fla fla fla"
+    "pi1 nil pi2"
+    "foo foo foo"
     ;
+}
+
+#bla {
+    grid-area: bla;
+    background: black;
 }
 
 
@@ -53,11 +62,13 @@
     background: hsl(340, 5%, 11%);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 100px auto;
+    grid-template-rows: 50px 100px auto auto auto;
     grid-template-areas: 
     "hea nav nav"
     "tef tef tef"
     "tim tim tim"
+    "pi1 tnf pi2"
+    "foo foo foo"
     ;
 }
 
@@ -73,8 +84,6 @@ footer{
     "fcr fcr"
     ;
 }
-
-
 
 
 #footer_om_oss{
@@ -102,9 +111,6 @@ footer{
     align-items: center;
     row-gap: 20px;
 }
-
-
-
 
 
 #footer_copyright{
@@ -214,13 +220,18 @@ nav{
 #flashcards_link{
     grid-area: fla;
     background-color: rgb(11, 165, 212);
-    display: flex;
-    justify-content: center;
-    align-items: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "fca"
+    "fcc"
+    ;
 }
 
 #flashcards_article{
     flex-direction: column;
+    grid-area: fca;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -252,6 +263,21 @@ img{
     padding: 10px;
     border-radius: 10%;
 }
+
+
+#flashcards_img{
+    height: 200px;
+    width: auto;
+}
+
+#flashcards_clue{
+    grid-area: fcc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 
 #start_section_indelning_1{
     margin: 5px;
@@ -461,7 +487,7 @@ img{
 
 
 h1 {
-    color: rgb(11, 165, 212);;
+    color: rgb(11, 165, 212);
 }
 
 h2 {
@@ -503,6 +529,40 @@ a {
     text-decoration: wavy;
 }
 
+#start_inledning_h3{
+    color: white;
+    margin-top: 10px;
+}
+
+
+.start_link_lists:hover{
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+.start_link_text{
+    font-size: 1.32rem;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+
+.start_link_lists{
+    text-decoration: double;
+    color: rgb(16, 43, 74);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    background: rgb(8, 35, 36);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#start_link_items{
+    margin-top: 20px;
+}
+
 .footer_text{
     color: white;
     font-family: sans-serif;
@@ -516,9 +576,48 @@ a {
     font-size: 1.64rem;
 }
 
+#tnf{
+    grid-area: tnf;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 ul{
     list-style: none;
 }
+
+
+#start{
+    background: rgb(23, 154, 197);
+    grid-area: sta;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "sit sit"
+    "sii sii"
+    ;
+}
+
+#start_inledning_text{
+    grid-area: sit;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+
+#start_inledning_img{
+    grid-area: sii;
+}
+
 
 
 @media screen and (min-width: 768px) {
@@ -530,7 +629,8 @@ ul{
         grid-template-areas: 
         "hea nav nav"
         "tex tit tes"
-        "pi2 fla pi1"
+        "pi1 fla pi2"
+        "foo foo foo"
         ;
     }
 
@@ -555,11 +655,13 @@ ul{
         background: hsl(340, 5%, 11%);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 50px 100px auto;
+        grid-template-rows: 50px 100px auto auto;
         grid-template-areas: 
         "hea nav nav"
         "tef tef tef"
         "tim tim tim"
+        "pi1 tnf pi2"
+        "foo foo foo"
         ;
     }
 
@@ -583,7 +685,30 @@ ul{
         color: rgb(23, 154, 197);
     }
 
+    #start{
+        background: rgb(23, 154, 197);
+        grid-area: sta;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "sit sii"
+        ;
+    }
 
+    #start_inledning_text{
+        grid-area: sit;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: start;
+        flex-direction: column;
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+
+    #start_inledning_img{
+        grid-area: sii;
+    }
 
 
     #start_section_indelning_1{

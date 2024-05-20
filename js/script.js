@@ -1,5 +1,5 @@
 const svar = document.getElementById('svar')
-const flashcards_article = document.getElementById('flashcards_article')
+const flashcards_link = document.getElementById('flashcards_link')
 
 
 function toggleMenu() {
@@ -7,4 +7,4 @@ function toggleMenu() {
 }
 
 
-flashcards_article.addEventListener('click', toggleMenu)
+flashcards_link.addEventListener('click', toggleMenu)
